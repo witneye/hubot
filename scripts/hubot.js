@@ -1,4 +1,3 @@
-module.exports = (robot) ->
-
-   robot.hear /badger/i, (res) ->
-     res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
+robot.hear(/i did it/i, function(msg){
+	msg.send("Congratulations! Good job!");
+});
