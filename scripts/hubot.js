@@ -1,7 +1,7 @@
 module.exports = function(robot) {
 
 robot.respond(/is it a (weekend|holiday)\s?\?/i, function(msg){
-var today = new Date();
+	var today = new Date();
 	msg.reply(today.getDay() === 0 || today.getDay() === 6 ? "YES" : "NO");
 });
 
@@ -43,6 +43,13 @@ robot.respond(/add (.) and (.)/i, function(msg) {
 	c = a + b
 
 	return msg.reply(a + " plus " + b + " = " + c);
+});
+
+
+
+robot.respond(/do we have class today?/, function(msg){
+	var today = new Date();
+	msg.reply(today.getDay() === 0 || today.getDay() === 6 ? "YES" : "NO");
 });
 
 
