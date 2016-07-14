@@ -45,7 +45,7 @@ robot.respond(/add (.) and (.)/i, function(msg) {
 	return msg.reply(a + " plus " + b + " = " + c);
 });
 
-robot.respond(/do we have class today?/i, function(msg){
+robot.respond(/do we have class today/, function(msg){
 	var today = new Date();
 	msg.reply(today.getDay() === 1 || today.getDay() === 3 ? "YES" : "NO");
 });
