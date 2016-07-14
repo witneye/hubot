@@ -35,5 +35,15 @@ robot.respond(/Hi Hubot! My name is (.*)/i, function(msg) {
 	return msg.reply("Nice to meet you, " + name + "!");
 }
 
+robot.respond(/add (.) and (.)/i, function(msg) {
+	var a;
+	var b;
+	a = parseInt(msg.match[1]);
+	b = parseInt(msg.match[2]);
+	c = a + b
+
+	return msg.reply(a + " plus " + b + " = " + c);
+});
+
 
 }
