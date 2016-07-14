@@ -41,13 +41,7 @@ robot.respond(/add (.) and (.)/i, function(msg) {
 	a = parseInt(msg.match[1]);
 	b = parseInt(msg.match[2]);
 	c = a + b
-
 	return msg.reply(a + " plus " + b + " = " + c);
-});
-
-robot.respond(/do we have class today/i, function(msg){
-	var today = new Date();
-	msg.reply(today.getDay() === 1 || today.getDay() === 3 ? "YES" : "NO");
 });
 
 }
