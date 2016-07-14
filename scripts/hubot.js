@@ -23,7 +23,7 @@ robot.hear(/Hello!/, function(res) {
 });
 
 robot.respond(/What's your favorite food?/, function(res) {
-	return res.send("I'm a robot--I don't eat food!");
+	return res.send("I'm a robot--I don't eat!");
 });
 
 robot.respond(/Hi Hubot! My name is (.*)/i, function(msg) {
@@ -45,7 +45,7 @@ robot.respond(/add (.) and (.)/i, function(msg) {
 	return msg.reply(a + " plus " + b + " = " + c);
 });
 
-robot.respond(/do we have class today?\?/i, function(msg){
+robot.respond(/do we have class today?/i, function(msg){
 	var today = new Date();
 	msg.reply(today.getDay() === 1 || today.getDay() === 3 ? "YES" : "NO");
 });
