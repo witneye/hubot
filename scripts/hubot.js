@@ -6,7 +6,7 @@ robot.respond(/What do you eat?/, function(res) {
 
 robot.respond(/Is class meeting today?/i, function(msg){
 	var today = new Date();
-	msg.reply(today.getDay() === 1 || today.getDay() === 3 ? "Yes we do!" : "nah, not today");
+	msg.reply(today.getDay() === 1 || today.getDay() === 3 ? "Yes we do, because today is " + today : "nah, not today");
 });
 
 
