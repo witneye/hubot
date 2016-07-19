@@ -14,7 +14,7 @@ module.exports = function(bot) {
 	});
 
 	bot.hear(/oh nelly/i, function(res) {
-    	bot.messageRoom(res.message.user.name, "awesome!";
+    	bot.messageRoom(res.message.user.name, "awesome!");
   	});
 
 
