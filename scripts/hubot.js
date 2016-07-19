@@ -13,8 +13,8 @@ module.exports = function(bot) {
 		return res.send('hi', res.message.user.name);
 	});
 
-	robot.respond(/oh nelly/i, function(msg) {
-    	robot.messageRoom "userid" "message";
+	bot.hear(/oh nelly/i, function(res) {
+    	bot.messageRoom(res.message.user.name, "awesome!";
   	});
 
 
