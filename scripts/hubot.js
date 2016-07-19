@@ -16,14 +16,14 @@ module.exports = function(bot) {
 
 
 
-	// bot.respond(/hi ya/i, function (msg) {
- //    	bot.send({ user: msg.message.user.jid }, 'hi');
- //  	});
+	bot.respond(/oh nelly/i, function (msg) {
+    	bot.send({ user: msg.message.user.jid }, 'hi');
+  	});
 
-bot.respond(/hi ya/i, function (msg) {
-	msg.envelope.user.type = 'direct'
-  	msg.send "Hey #{msg.envelope.user.name}!"
-});
+// bot.respond(/oh nelly/i, function (msg) {
+// 	msg.envelope.user.type = 'direct'
+//   	msg.send "Hey #{msg.envelope.user.name}!"
+// });
 
  //    bot.hear(/hey/, function(msg) {
  //    	return msg.envelope.user.id.send("Well, Hello there");
