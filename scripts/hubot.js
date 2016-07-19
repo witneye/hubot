@@ -13,6 +13,10 @@ module.exports = function(robot) {
 		return res.send('hi', res.message.user.name);
 	});
 
+	robot.hear(/hey/, function(res) {
+    	res.message.user.name.reply("Well, Hello there");
+	});
+
 	
 
 
