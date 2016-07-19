@@ -10,7 +10,7 @@ module.exports = function(robot) {
 	});
 
 	robot.hear(/Yo/, function(res) {
-		return res.send(res.message.user.name);
+		return res.send('hi', res.message.user.name);
 	});
 
 	
@@ -21,12 +21,12 @@ module.exports = function(robot) {
 	//   bot.reply(message, username);
 	// });
 
-	// controller.hears(['texas'], 'ambient', function(bot, message) {
- //  		bot.api.users.info({user: message.user}, function(err, info){
+	controller.hears(/hey/, function(bot, message) {
+  		bot.api.users.info({user: message.user}, function(err, info){
     	
- //    	bot.reply(message, info.user.name)
- //  		});
-	// })
+    	bot.reply(message, info.user.name)
+  		});
+	})
 
 
 }
