@@ -13,12 +13,15 @@ module.exports = function(bot) {
 		return res.send('hi', res.message.user.name);
 	});
 
-
-
-
-	bot.respond(/oh nelly/i, function (msg) {
-    	bot.send({ user: msg.message.user.jid }, 'hi');
+	robot.respond(/oh nelly/i, function(msg) {
+    	robot.messageRoom "userid" "message";
   	});
+
+
+
+	// bot.respond(/oh nelly/i, function (msg) {
+ //    	bot.send({ user: msg.message.user.jid }, 'hi');
+ //  	});
 
 // bot.respond(/oh nelly/i, function (msg) {
 // 	msg.envelope.user.type = 'direct'
@@ -29,12 +32,7 @@ module.exports = function(bot) {
  //    	return msg.envelope.user.id.send("Well, Hello there");
 	// });
 
-	// robot.respond(/hi/i, function(msg) {
- //    	robot.messageRoom "userid" "message";
- //  	});
-
 	
-
 
 	// robot.hear(['hello'], 'ambient', function(bot, message) {
 	//   username = user.info.name;
