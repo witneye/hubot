@@ -21,12 +21,10 @@ module.exports = function(robot) {
 	//   bot.reply(message, username);
 	// });
 
-	controller.hears(/hey/, function(bot, message) {
-  		bot.api.users.info({user: message.user}, function(err, info){
-    	
-    	bot.reply(message, info.user.name)
-  		});
-	})
-
+	// controller.hears(/hey/, function(bot, message) {
+ //  		bot.api.users.info({user: message.user}, function(err, info){
+ //    	bot.reply(message, info.user.name)
+ //  		});
+	// });
 
 }
