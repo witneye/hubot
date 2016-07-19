@@ -10,7 +10,7 @@ module.exports = function(bot) {
 	});
 
 	bot.hear(/Yo/, function(res) {
-		return res.send('hi', res.message.user.name);
+		return res.send(res.message.user.name, 'hi');
 	});
 
 	bot.hear(/oh nelly/i, function(res) {
