@@ -18,7 +18,7 @@ module.exports = function(robot) {
 	});
 
 	robot.respond(/hi/i, function(msg) {
-    	robot.send({ user: msg.message.user.jid }, 'hi');
+    	robot.messageRoom "userid" "message";
   	});
 
 	
