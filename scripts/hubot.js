@@ -13,13 +13,13 @@ module.exports = function(robot) {
 		return res.send('hi', res.message.user.name);
 	});
 
-	robot.hear(/hey/, function(res) {
-    	return msg.envelope.user.id.send("Well, Hello there");
-	});
+	// robot.hear(/hey/, function(res) {
+ //    	return msg.envelope.user.id.send("Well, Hello there");
+	// });
 
-	robot.respond(/hi/i, function(msg) {
-    	robot.messageRoom "userid" "message";
-  	});
+	// robot.respond(/hi/i, function(msg) {
+ //    	robot.messageRoom "userid" "message";
+ //  	});
 
 	
 
