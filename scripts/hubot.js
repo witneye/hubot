@@ -17,10 +17,8 @@ module.exports = function(robot) {
     	return msg.envelope.user.id.send("Well, Hello there");
 	});
 
-	robot.respond(/hi/i, function (msg) {
-    	robot.send({
-      		user: msg.message.user.jid
-    	}, 'hi');
+	robot.respond(/hi/i, function(msg) {
+    	robot.send({ user: msg.message.user.jid }, 'hi');
   	});
 
 	
