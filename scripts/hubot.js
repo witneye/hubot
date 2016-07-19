@@ -14,7 +14,7 @@ module.exports = function(robot) {
 	});
 
 	robot.hear(/hey/, function(res) {
-    	return res.message.user.name.send("Well, Hello there");
+    	return msg.envelope.user.id.send("Well, Hello there");
 	});
 
 	
