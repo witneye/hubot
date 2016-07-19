@@ -9,5 +9,10 @@ robot.respond(/Is class meeting today?/i, function(msg){
 	msg.reply(today.getDay() === 1 || today.getDay() === 3 ? "Yes we do, because today is " + today : "nah, not today");
 });
 
+robot.hears(/'Hello There!'/, function(bot, message) {
+  username = users.info.name;
+  bot.reply(message, username);
+});
+
 
 }
