@@ -13,15 +13,17 @@ module.exports = function(bot) {
 		return res.send('hi', res.message.user.name);
 	});
 
-	
 
-	bot.hear(/hey/, function(msg) {
-    	bot.enter (response) ->
-    		user = response.message.user.name;
-    	response.send "/msg #{user} hey./"
-	});
 
-	
+
+	// bot.respond(/hi ya/i, function (msg) {
+ //    	bot.send({ user: msg.message.user.jid }, 'hi');
+ //  	});
+
+bot.respond(/hi ya/i, function (msg) {
+	msg.envelope.user.type = 'direct'
+  	msg.send "Hey #{msg.envelope.user.name}!"
+});
 
  //    bot.hear(/hey/, function(msg) {
  //    	return msg.envelope.user.id.send("Well, Hello there");
