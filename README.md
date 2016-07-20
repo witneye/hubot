@@ -1,3 +1,10 @@
+# There are three functions in my hubot
+1. type ---What do you eat?--- in slack and the hubot will respond "I'm a robot--I don't eat!"
+2. type ---@group2:Is class meeting today?--- and slckbot will repond using your slackbot id within the same channel. The answer includes the actual day GMT.
+3. type ---oh nelly--- and the bot will send you a direct message from the group saying "awesome"
+
+
+
 # witneysbot
 
 witneysbot is a chat bot built on the [Hubot][hubot] framework. It was
