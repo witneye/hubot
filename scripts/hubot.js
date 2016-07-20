@@ -25,11 +25,11 @@ module.exports = function(bot) {
   	});
 
 
-  	bot.respond(/rock|paper|scissors/i, function(res){
-		var choice = ["rocks", "paper", "scissors"];
-		var switchChoice = choice[_.random(choice.length-1)];
-		return res.send(switchChoice);
-	});
+ //  	bot.respond(/rock|paper|scissors/i, function(res){
+	// 	var choice = ["rocks", "paper", "scissors"];
+	// 	var switchChoice = choice[_.random(choice.length-1)];
+	// 	return res.send(switchChoice);
+	// });
 
 
 }
