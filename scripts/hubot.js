@@ -24,7 +24,8 @@ module.exports = function(bot) {
     	bot.messageRoom(res.message.user.name, "awesome!");
   	});
 
-  	bot.respond(/rocks/ || /paper/ || /scissors/i, function(res){
+
+  	bot.respond /(rock|spock|paper)/i, function(res){
 		var choice = ["rocks", "paper", "scissors"];
 		var switchChoice = choice[_.random(choice.length-1)];
 		return res.send(switchChoice);
