@@ -5,7 +5,6 @@ module.exports = function(bot) {
 	});
 
 	bot.respond(/Is class meeting today?/i, function(msg){
-		
 		var weekdays = new Array(7);
 		weekdays[0] = "Sunday";
 		weekdays[1] = "Monday";
@@ -17,13 +16,19 @@ module.exports = function(bot) {
 
 		var today = new Date();
 		day = today.getDay();
-		
+
 		msg.reply(today.getDay() === 2 || today.getDay() === 3 ? "Yes we do, because today is " + weekdays[day] : "nah, not today is " + weekdays[day]);
 	});
 
 	bot.hear(/oh nelly/i, function(res) {
     	bot.messageRoom(res.message.user.name, "awesome!");
   	});
+
+  	bot.respond(/rocks/ || /paper/ || /scissors/i, function(res){
+		var choice = ["rocks", "paper", "scissors"];
+		var switchChoice = choice[_.random(choice.length-1)];
+		msg.reply(switchChoice);
+	});
 
 
 }
